@@ -2,6 +2,7 @@ import React from 'react';
 import Bannar from '../Bannar/Bannar';
 import Category from '../../Category/Category';
 import PopularMenu from '../PopularMenu/PopularMenu';
+import Featured from './Featured/Featured';
 
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
             <Bannar></Bannar>
             <Category></Category>
             <PopularMenu></PopularMenu>
+            <Featured></Featured>
         </div>
     );
 };
