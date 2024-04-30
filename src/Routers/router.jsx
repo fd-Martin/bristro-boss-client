@@ -3,23 +3,28 @@ import Main from "../Layout/Main";
 import Home from "../Page/Home/Home/Home";
 import Menu from "../Page/Menu/Menu/Menu";
 import Order from "../Page/Order/Order/Order";
+import Login from "../Page/LogIn/Login";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
-        children:[
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
             {
-                path:'/menu',
-                element:<Menu></Menu>
+                path: '/menu',
+                element: <Menu></Menu>
             },
             {
-                path:'/order/:category',
-                element:<Order></Order>
+                path: '/order/:category',
+                element: <Order></Order>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
             }
         ]
     },
