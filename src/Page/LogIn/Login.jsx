@@ -4,6 +4,7 @@ import { AuthContext } from '../../Prodiver/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 const Login = () => {
     // const captchaRef = useRef(null);
     const [disabled, setDisabled] = useState(true);
@@ -55,7 +56,7 @@ const Login = () => {
         if (validateCaptcha(user_captcha_value)) {
             setDisabled(false)
         }
-         else {
+        else {
             setDisabled(true)
         }
     }
@@ -103,6 +104,7 @@ const Login = () => {
                                 </div>
                             </form>
                             <p> <small>New here? <Link to='/signUp'>Create an Account</Link></small> </p>
+                            <SocialLogin></SocialLogin>
                         </div>
                     </div>
                 </div>
